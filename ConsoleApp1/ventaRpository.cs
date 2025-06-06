@@ -20,7 +20,7 @@ namespace ConsoleApp1
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO Ventas (Nombre, Fecha, Duracion) VALUES (@Nombre, @Fecha, @Duracion)";
+                    string query = "INSERT INTO dbo.Ventas (Nombre, Fecha, Duracion) VALUES (@Nombre, @Fecha, @Duracion)";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@Nombre", venta.Nombre);
                     cmd.Parameters.AddWithValue("@Fecha", venta.Fecha);
